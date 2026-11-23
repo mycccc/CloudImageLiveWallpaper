@@ -1,6 +1,4 @@
 # CloudImageLiveWallpaper
-```markdown
-# CloudImageLiveWallpaper
 
 把风云四号B星（FY-4B）最新云图自动下载并设置为 Windows 桌面幻灯片壁纸。
 
@@ -136,6 +134,7 @@ Windows 10/11 原生幻灯片的最小间隔是 **10 秒（10000 毫秒）**，�
 
 ## 常见问题
 
+
 **任务计划程序里有多条同名任务**
 
 本项目固定使用 `TaskPath=\` + `TaskName=FY4B_CloudImage_Download` + `-Force` 覆盖注册。无论从哪个目录运行 `1install.cmd`，都只会保留一条。若发现重复，删除多余的并重跑 `1install.cmd` 即可。
@@ -148,10 +147,6 @@ Windows 10/11 原生幻灯片的最小间隔是 **10 秒（10000 毫秒）**，�
 
 依次检查：任务计划程序中任务状态是否为「已启用」；日志是否有下载成功记录；「设置 → 个性化 → 背景」中类型是否为「幻灯片放映」、相册是否指向脚本目录；文件夹里是否至少有 2 张图片。
 
-**计划任务运行了但窗口仍然闪一下**
-
-检查计划任务的动作是否为 `wscript.exe` + `2run_hidden.vbs`。如果之前手动注册过直接调用 `powershell.exe` 的任务，需要重新运行 `1install.cmd` 选 `[1] Enable` 覆盖为新动作。
-
 ## 致谢与免责
 
 - 数据来源：[国家卫星气象中心](https://www.nsmc.org.cn/)，请遵守其数据使用条款。
@@ -161,4 +156,3 @@ Windows 10/11 原生幻灯片的最小间隔是 **10 秒（10000 毫秒）**，�
 ## License
 
 MIT
-```
